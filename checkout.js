@@ -91,7 +91,7 @@ window.onload = function() {
             checkoutForm.addEventListener('submit', function(e) {
                 e.preventDefault();
                 alert("Ordine confermato con successo!");
-                // Reindirizza alla pagina di conferma
+                // Reindirizza alla pagina home
                 window.location.href = 'index.html';
             });
         })
