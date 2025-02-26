@@ -1,0 +1,110 @@
+/* Stile generale per il body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.navbar-brand img {
+    height: 40px; /* Impostare un'altezza fissa per l'immagine */
+    margin-right: 10px; /* Distanza tra il logo e il testo */
+    vertical-align: middle; /* Allineamento verticale del logo rispetto al testo */
+}
+.navbar-brand {
+    font-weight: bold;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0.8rem;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #00bcd4;
+}
+
+/* Titoli principali */
+h1, h2 {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+/* Sezione Immagine */
+.image-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay sulle immagini */
+.image-container:hover img {
+    opacity: 0.8;
+}
+
+.image-container button {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s, transform 0.2s ease-in-out;
+}
+
+.image-container button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.prev {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    padding: 40px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Sezione car image descrizione */
+section p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}

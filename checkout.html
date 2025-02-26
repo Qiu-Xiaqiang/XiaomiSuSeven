@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title> <!-- Titolo vuoto, verrà caricato dal JSON -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <img src="Immagini/logo.jpg" alt="Logo Xiaomi Su7" style="height: 40px; margin-right: 10px;">
+            <a class="navbar-brand" href="index.html"></a> <!-- Caricato dal JSON -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="navbar-links"></ul> <!-- Menu caricato da JSON -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sezione Checkout -->
+    <div class="container mt-5 pt-5">
+        <h2 class="text-center text-light" id="checkout-title"></h2> <!-- Titolo caricato dal JSON -->
+        <form id="checkout-form" class="p-4 bg-dark text-light rounded">
+            <!-- Campi del modulo caricati dal JSON -->
+            <div id="form-fields"></div>
+
+            <h4 class="text-center mt-4" id="checkout-total-label"></h4> <!-- Etichetta totale caricato da JSON -->
+            <span id="checkout-total" class="text-warning"></span> <!-- Totale caricato da JSON -->
+
+            <button type="submit" class="btn btn-success w-100 mt-3" id="submit-button"></button> <!-- Bottone conferma caricato da JSON -->
+        </form>
+    </div>
+
+    <script src="checkout.js"></script>
+</body>
+<footer class="text-center py-4">
+    <div class="container">
+        <p id="footer-text"></p> <!-- Testo footer caricato da JSON -->
+        <p id="last-update"></p>
+        <div id="footer-links"></div> <!-- Link footer caricato da JSON -->
+    </div>
+</footer>
+</html>

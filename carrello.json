@@ -1,0 +1,24 @@
+{
+  "navbar": {
+    "home": "Home",
+    "cart": "Carrello",
+    "contact": "Contattaci",
+    "login": "Login",
+    "logo": "Immagini/logo.jpg",
+    "icons": {
+      "home": "Immagini/Home.jpg",
+      "cart": "Immagini/carrello.jpg",
+      "contact": "Immagini/contact.jpg",
+      "user": "Immagini/Omino.jpg"
+    }
+  },
+  "cart": {
+    "title": "Il tuo Carrello",
+    "couponLabel": "Codice Coupon",
+    "couponPlaceholder": "INSERISCI IL CODICE COUPON->ES: XIAOMISU7",
+    "applyCouponButton": "Applica Coupon",
+    "clearCartButton": "Svuota il carrello",
+    "totalLabel": "Totale",
+    "checkoutButton": "Procedi al pagamento"
+  }
+}

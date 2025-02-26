@@ -1,0 +1,58 @@
+{
+    "navbar": {
+      "home": "Home",
+      "cart": "Carrello",
+      "contact": "Contattaci",
+      "login": "Login",
+      "logo": "Immagini/logo.jpg",
+      "icons": {
+        "home": "Immagini/Home.jpg",
+        "cart": "Immagini/carrello.jpg",
+        "contact": "Immagini/contact.jpg",
+        "user": "Immagini/Omino.jpg"
+      }
+    },
+    "hero": {
+      "title": "Benvenuto su Xiaomi Su7",
+      "subtitle": "Scopri la nostra Su7 elettrica con prestazioni superiori, design innovativo e tecnologie avanzate.",
+      "image": "Immagini/xiaomiSu7.jpg",
+      "buttonText": "Esplora i modelli",
+      "buttonLink": "archivioProdotti.html"
+    },
+    "models": [
+      {
+        "name": "Xiaomi Su7 - Modello Base",
+        "price": "A partire da €28.000",
+        "image": "Immagini/white.jpg",
+        "description": "Autonomia fino a 668 km, motore da 299 CV, l'accelerazione da 0 a 100 richiede solo 5.28s, design sportivo e tecnologie all'avanguardia.",
+        "link": "Su7base.html"
+      },
+      {
+        "name": "Xiaomi Su7 - Modello Pro",
+        "price": "A partire da €32.000",
+        "image": "Immagini/black.jpg",
+        "description": "Autonomia fino a 730 km, motore potenziato da 450 CV, l'accelerazione da 0 a 100 richiede solo 4.37s, interni premium e tecnologie di assistenza alla guida.",
+        "link": "Su7Pro.html"
+      },
+      {
+        "name": "Xiaomi Su7 - Modello Max",
+        "price": "A partire da €40.000",
+        "image": "Immagini/pink.jpg",
+        "description": "Autonomia 880 km, motore da 673 CV, l'accelerazione da 0 a 100 richiede solo 2,78s, equipaggiamento completo e assistenza alla guida di livello 5.",
+        "link": "Su7Max.html"
+      },
+      {
+        "name": "Xiaomi Su7 - Modello Ultra",
+        "price": "A partire da €105.000",
+        "image": "Immagini/ultra3.jpg",
+        "description": "Autonomia 560 km, motore da 1548 CV, l'accelerazione da 0 a 100 richiede solo 1.98s. Le prestazioni sono alla pari con Porsche, la tecnologia è vicina a Tesla e il lusso è paragonabile a BBA.",
+        "link": "Su7ultra.html"
+      }
+    ],
+    "footer": {
+      "copyright": "©Xiaqiang Qiu - Tutti i diritti riservati",
+      "sale": "Vendite ufficiali di Xiaomi Su7",
+      "lastUpdate": "Ultimo aggiornamento: febbraio 2025"
+    }
+  }
+  

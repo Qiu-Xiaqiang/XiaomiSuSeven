@@ -1,0 +1,37 @@
+{
+    "navbar": {
+      "home": "Home",
+      "cart": "Carrello",
+      "contact": "Contattaci",
+      "login": "Login",
+      "logo": "Immagini/logo.jpg",
+      "icons": {
+        "home": "Immagini/Home.jpg",
+        "cart": "Immagini/carrello.jpg",
+        "contact": "Immagini/contatti.jpg",
+        "user": "Immagini/Omino.jpg"
+      }
+    },
+    "contact": {
+      "title": "Modello di prova: Xiaomi Su7",
+      "form": {
+        "name": "Inserisci il nome:",
+        "surname": "Inserisci il cognome:",
+        "year": "Anno di nascita:",
+        "phone": "Il tuo numero di telefono:"
+      },
+      "button": "Conferma e Invia",
+      "successMessage": "Conferma avvenuta con successo! A presto verrai contattato per la prova della macchina!",
+      "homeLink": "⬅ Torna alla Home"
+    },
+    "cart": {
+      "title": "Il tuo Carrello",
+      "couponLabel": "Codice Coupon",
+      "couponPlaceholder": "INSERISCI IL CODICE COUPON->ES: XIAOMISU7",
+      "applyCouponButton": "Applica Coupon",
+      "clearCartButton": "Svuota il carrello",
+      "totalLabel": "Totale",
+      "checkoutButton": "Procedi al pagamento"
+    }
+  }
+  

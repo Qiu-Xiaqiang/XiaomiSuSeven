@@ -1,0 +1,16 @@
+body {
+    background-color: #121212;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.btn {
+    font-size: 1.2em;
+}

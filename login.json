@@ -1,0 +1,19 @@
+{
+    "navbar": {
+      "logo": "Immagini/logo.jpg",
+      "home": "Home",
+      "cart": "Carrello",
+      "contact": "Contattaci",
+      "login": "Login"
+    },
+    "login": {
+      "title": "Login",
+      "emailLabel": "Nome o Email:",
+      "passwordLabel": "Password:",
+      "rememberMeLabel": "Ricordami",
+      "submitButton": "Login",
+      "backHomeText": "Torna alla Home",
+      "loginSuccessMessage": "Login avvenuto con successo! Sarai reindirizzato alla home."
+    }
+  }
+  

@@ -1,0 +1,35 @@
+{
+    "title": "Pagamento - Xiaomi Su7",
+    "navbar": {
+        "brand": "Xiaomi Su7",
+        "menu": [
+            { "label": "Home", "url": "index.html" },
+            { "label": "Carrello", "url": "carrello.html" },
+            { "label": "Contattaci", "url": "contatti.html" },
+            { "label": "Login", "url": "login.html" }
+        ]
+    },
+    "checkout": {
+        "title": "Inserisci i tuoi dati per il pagamento",
+        "form": {
+            "name": "Nome e Cognome",
+            "email": "Email",
+            "address": "Indirizzo",
+            "cap": "CAP",
+            "citizenship": "Cittadinanza",
+            "card": "Numero Carta di Credito",
+            "swift": "Swift"
+        },
+        "total_label": "Totale da pagare:",
+        "submit_button": "Conferma e Invia Ordine"
+    },
+    "footer": {
+        "text": "A cura di ©Xiaqiang Qiu - Tutti i diritti riservati - Vendite ufficiali di Xiaomi Su7",
+        "links": [
+            { "label": "Home", "url": "index.html" },
+            { "label": "Carrello", "url": "carrello.html" },
+            { "label": "Contattaci", "url": "contatti.html" },
+            { "label": "Login", "url": "login.html" }
+        ]
+    }
+}

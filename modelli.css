@@ -1,0 +1,159 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container-fluid {
+    height: 100vh;
+}
+
+.image-section {
+    flex: 7;
+    padding: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.description-section {
+    flex: 5;
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Selezione Colori */
+.color-box {
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.color-box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Evidenziare la selezione del colore */
+.color-box:focus {
+    border: 3px solid #f1c40f;
+}
+
+#whiteColor {
+    border: 3px solid #000;
+}
+
+#celesteColor {
+    border: 3px solid #000;
+}
+
+#greenColor {
+    border: 3px solid #000;
+}
+
+@media (max-width: 767px) {
+    .color-box {
+        width: 60px;
+        height: 40px;
+    }
+}
+.card {
+    background-color: #333;  /* Mantieni un fondo scuro */
+    border: 1px solid #444;  /* Aggiungi un bordo sottile */
+    padding: 20px;  /* Spazio interno per rendere il testo più leggibile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Ombra per un effetto di profondità */
+    border-radius: 10px;  /* Rendi i bordi leggermente arrotondati */
+    margin-bottom: 20px;  /* Spazio tra le card */
+}
+
+.card-body {
+    padding: 15px;  /* Aggiungi padding per il contenuto interno */
+}
+
+.card-title {
+    font-size: 1.25rem;  /* Rende il nome del recensore più grande */
+    font-weight: bold;  /* Rende il nome in grassetto */
+}
+
+.card-text {
+    font-size: 1rem;  /* Impostazione standard per il testo della recensione */
+}
+
+.card i {
+    color: #ffcc00;  /* Colore delle stelle per un effetto dorato */
+}
+/* Aggiungi un po' di margine tra la selezione colori e la sezione recensioni */
+.description-section .mt-5 {
+    margin-top: 40px;  /* Distanza aggiuntiva tra la selezione dei colori e la sezione recensioni */
+}
+
+/* Le card delle recensioni */
+.card {
+    background-color: #333;  /* Mantieni il fondo scuro */
+    border: 1px solid #444;  /* Aggiungi un bordo */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 20px;  /* Spazio tra le card */
+}
+
+.card-body {
+    padding: 15px;  /* Spazio all'interno delle card */
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+.card i {
+    color: #ffcc00;  /* Colore delle stelle dorate */
+}
+/* Impostiamo il corpo della pagina come un contenitore flessibile */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Aggiungiamo Flexbox per gestire il layout */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#last-update {
+    font-size: 0.875rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+.success-message {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

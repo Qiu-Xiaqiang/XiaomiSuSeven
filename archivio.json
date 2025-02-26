@@ -1,0 +1,38 @@
+{
+    "title": "Archivio Prodotti - Xiaomi Su7",
+    "navbar": {
+        "Su7":"XiaomiSu7",
+        "home": "Home",
+        "carrello": "Carrello",
+        "contatti": "Contattaci",
+        "login": "Login"
+    },
+    "main": {
+        "h1": "Modelli Xiaomi Su7",
+        "sections": [
+            {
+                "title": "SU7 Base",
+                "description": "Autonomia: 668 km | Accelerazione: 5.28s 0-100 km/h | Carica auto 1-80% solo 25m"
+            },
+            {
+                "title": "SU7 Pro",
+                "description": "Autonomia: 730 km | Accelerazione: 4.37s 0-100 km/h | Carica auto 1-80% solo 30"
+            },
+            {
+                "title": "SU7 Max",
+                "description": "Autonomia: 880 km | Accelerazione: 2.78s 0-100 km/h | Carica auto 1-80% solo 19m"
+            },
+            {
+                "title": "Interni per Su7-Base, Pro e Max",
+                "description": "Interni moderni e tecnologici | Grande e pieno di spazio"
+            },
+            {
+                "title": "SU7 Ultra",
+                "description": "Autonomia: 560 km | Accelerazione: 1.98s 0-100 km/h | Accelerazione: 3.28s 0-200 km/h"
+            }
+        ]
+    },
+    "footer": {
+        "text": "A cura di ©Xiaqiang Qiu - Tutti i diritti riservati - Vendite ufficiali di Xiaomi Su7"
+    }
+}

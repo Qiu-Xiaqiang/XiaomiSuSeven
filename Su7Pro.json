@@ -1,0 +1,59 @@
+{
+    "page_title": "Xiaomi Su7 Pro - Modello",
+    "navbar": {
+      "logo": "Immagini/logo.jpg",
+      "brand_name": "Xiaomi Su7 Pro",
+      "items": [
+        {"text": "Home", "link": "index.html"},
+        {"text": "Carrello", "link": "carrello.html"},
+        {"text": "Contattaci", "link": "contatti.html"},
+        {"text": "Login", "link": "login.html"}
+      ]
+    },
+    "image_section": {
+      "id": "carCarousel",
+      "images": [
+        {"src": "Immagini/black.jpg", "alt": "Xiaomi Su7 Pro"},
+        {"src": "Immagini/black1.jpg", "alt": "Xiaomi Su7 Pro"},
+        {"src": "Immagini/black2.jpg", "alt": "Xiaomi Su7 Pro"},
+        {"src": "Immagini/black3.jpg", "alt": "Xiaomi Su7 Pro"},
+        {"src": "Immagini/black4.jpg", "alt": "Xiaomi Su7 Pro"}
+      ]
+    },
+    "description_section": {
+      "title": "Xiaomi Su7 Pro",
+      "text": "Xiaomi Su7 Pro è un'auto elettrica con prestazioni superiori, design futuristico e tecnologie avanzate. Disponibile in due colori: Nero, Arancione.",
+      "features": [
+        {"icon": "fas fa-bolt", "text": "Autonomia fino a 730 km"},
+        {"icon": "fas fa-motorcycle", "text": "Motore da 450 CV"},
+        {"icon": "fas fa-cogs", "text": "Design sportivo ed elegante"}
+      ],
+      "colors": [
+        {"color": "black", "hex": "#000000"},
+        {"color": "orange", "hex": "#FF5722"}
+      ],
+      "price": "A partire da €32.000",
+      "add_to_cart_text": "Aggiungi al Carrello"
+    },
+    "reviews_section": {
+      "title": "Recensioni dei Clienti",
+      "reviews": [
+        {
+          "name": "Grappeggia Nicolò",
+          "text": "Macchina incredibile! La velocità e l'autonomia sono eccezionali.",
+          "rating": 4.5
+        },
+        {
+          "name": "Cherubin Niccolò",
+          "text": "Comodità, prestazioni e design super! Non vedo l'ora di provarla sulla strada.",
+          "rating": 5
+        },
+        {
+          "name": "Ding Alessandro",
+          "text": "Ottima macchina! Il design è stupendo e il comfort è ai massimi livelli.",
+          "rating": 4.5
+        }
+      ]
+    }
+  }
+  

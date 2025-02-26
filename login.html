@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Xiaomi SU7</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- Messaggio di conferma -->
+        <p id="login-success-message" class="hidden success-message"></p>
+        
+        <div class="logo-container">
+            <img id="logo" src="" alt="Logo Xiaomi Su7" class="logo">
+        </div>
+
+        <div class="login-form-container">
+            <h2 id="login-title"></h2>
+            <form id="login-form" onsubmit="submitLogin(event)">
+                <div class="input-group">
+                    <label for="email" id="email-label"></label>
+                    <input type="text" id="email" required placeholder="">
+                </div>
+
+                <div class="input-group">
+                    <label for="password" id="password-label"></label>
+                    <input type="password" id="password" required placeholder="">
+                </div>
+
+                <div class="remember-me">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me" id="remember-me-label"></label>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" id="submit-button"></button>
+                </div>
+            </form>
+            <!-- Freccetta Torna alla Home -->
+            <a href="index.html" id="back-home" class="back-home">
+                <span class="arrow"></span>
+            </a>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

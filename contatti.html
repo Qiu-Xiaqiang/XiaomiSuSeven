@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title"></title>
+    <link rel="stylesheet" href="contatti.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <img id="contact-image" alt="Xiaomi SU7">
+        </div>
+        <div class="right-section">
+            <div class="form-container">
+                <h2 id="form-title"></h2>
+                <form id="contact-form">
+                    <label for="name" id="name-label"></label>
+                    <input type="text" id="name" required>
+
+                    <label for="surname" id="surname-label"></label>
+                    <input type="text" id="surname" required>
+
+                    <label for="year" id="year-label"></label>
+                    <input type="number" id="year" required>
+
+                    <label for="phone" id="phone-label"></label>
+                    <input type="tel" id="phone" required>
+
+                    <button type="button" id="submit-button"></button>
+                </form>
+                <p id="success-message" class="hidden"></p>
+                <a id="home-link" href="index.html" class="hidden"></a>                
+            </div>
+        </div>
+    </div>
+    <script src="contatti.js"></script>
+</body>
+</html>
