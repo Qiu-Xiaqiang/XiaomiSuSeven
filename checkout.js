@@ -90,9 +90,9 @@ window.onload = function() {
             const checkoutForm = document.getElementById('checkout-form');
             checkoutForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                alert("Ordine confermato!");
+                alert("Ordine confermato con successo!");
                 // Reindirizza alla pagina di conferma
-                window.location.href = 'conferma.html';
+                window.location.href = 'index.html';
             });
         })
         .catch(error => {
