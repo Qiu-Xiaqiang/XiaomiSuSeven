@@ -1,0 +1,59 @@
+{
+  "pageTitle": "Xiaomi Su7 Max - Modello",
+  "navbar": {
+    "brand": "Xiaomi Su7 Max",
+    "logo": "Immagini/logo.jpg",
+    "links": [
+      { "href": "index.html", "text": "Home", "img": "Immagini/Home.jpg" },
+      { "href": "carrello.html", "text": "Carrello: 0", "img": "Immagini/carrello.jpg" },
+      { "href": "contatti.html", "text": "Contattaci", "img": "Immagini/contact.jpg" },
+      { "href": "login.html", "text": "Login", "img": "Immagini/Omino.jpg" }
+    ]
+  },
+  "model": {
+    "title": "Xiaomi Su7 Max",
+    "description": "Xiaomi Su7 Max è un'auto elettrica con prestazioni straordinarie, design moderno e tecnologie all'avanguardia. Disponibile in due colori: Rosa, Viola.",
+    "specs": [
+      { "icon": "fas fa-bolt", "text": "Autonomia fino a 880 km" },
+      { "icon": "fas fa-motorcycle", "text": "Motore da 673 CV" },
+      { "icon": "fas fa-cogs", "text": "Design elegante e accattivante" }
+    ],
+    "price": "Prezzo: A partire da €40.000",
+    "priceValue": 40000,
+    "button": "Aggiungi al Carrello",
+    "colorSelectionText": "Scegli il colore del tuo modello:",
+    "carouselAlt": "Xiaomi Su7 Max",
+    "carouselImages": {
+      "pink": [
+        "Immagini/pink.jpg",
+        "Immagini/pink1.jpg",
+        "Immagini/pink2.jpg",
+        "Immagini/pink3.jpg",
+        "Immagini/pink4.jpg"
+      ],
+      "purple": [
+        "Immagini/viola1.jpg",
+        "Immagini/viola2.jpg",
+        "Immagini/viola3.jpg",
+        "Immagini/viola4.jpg",
+        "Immagini/viola5.jpg"
+      ]
+    }
+  },
+  "carouselControls": {
+    "prev": "Precedente",
+    "next": "Successivo"
+  },
+  "reviews": {
+    "title": "Recensioni dei Clienti",
+    "items": [
+      { "name": "Leonardo Osti", "text": "La Xiaomi Su7 Max è fenomenale! Prestazioni da paura e design futuristico!", "rating": 4.5 },
+      { "name": "Paolo Qiu", "text": "Comodissima e potente! La mia esperienza di guida è stata superlativa!", "rating": 5 },
+      { "name": "Angelica Pigato", "text": "Il design è spettacolare, è incredibile! Non vedo l'ora di usarla ogni giorno.", "rating": 4.5 }
+    ]
+  },
+  "colorBoxes": {
+    "pink": "#e91e63",
+    "purple": "#9c27b0"
+  }
+}

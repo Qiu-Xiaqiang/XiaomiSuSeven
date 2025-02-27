@@ -1,63 +1,54 @@
 {
-    "page_title": "Xiaomi Su7 - Modello Base",
-    "navbar": {
-      "logo": "Immagini/logo.jpg",
-      "brand_name": "Xiaomi Su7",
-      "items": [
-        {"text": "Home", "link": "index.html"},
-        {"text": "Carrello", "link": "carrello.html"},
-        {"text": "Contattaci", "link": "contattati.html"},
-        {"text": "Login", "link": "login.html"}
-      ]
+  "title": "Xiaomi Su7 - Modello Base",
+  "navbar": {
+    "logo": "Immagini/logo.jpg",
+    "brand": "Xiaomi Su7",
+    "items": [
+      { "text": "Home", "link": "index.html", "img": "Immagini/Home.jpg" },
+      { "text": "Carrello", "link": "carrello.html", "img": "Immagini/carrello.jpg" },
+      { "text": "Contattaci", "link": "contattati.html", "img": "Immagini/contact.jpg" },
+      { "text": "Login", "link": "login.html", "img": "Immagini/Omino.jpg" }
+    ]
+  },
+  "carousel": [
+    { "src": "Immagini/white.jpg", "alt": "Xiaomi Su7 Base" },
+    { "src": "Immagini/white1.jpg", "alt": "Xiaomi Su7 Base" },
+    { "src": "Immagini/white2.jpg", "alt": "Xiaomi Su7 Base" },
+    { "src": "Immagini/white3.jpg", "alt": "Xiaomi Su7 Base" },
+    { "src": "Immagini/white4.jpg", "alt": "Xiaomi Su7 Base" }
+  ],
+  "description": {
+    "title": "Xiaomi Su7 Base",
+    "text": "Xiaomi Su7 Base è un'auto elettrica con prestazioni superiori, design innovativo e tecnologie avanzate. Disponibile in tre colori: Bianco, Celeste, Verde.",
+    "features": [
+      "Autonomia fino a 400 km",
+      "Motore da 400 CV",
+      "Design sportivo ed elegante"
+    ],
+    "price": "A partire da €28.000",
+    "priceValue": 28000,
+    "addToCart": "Aggiungi al Carrello"
+  },
+  "colors": {
+    "white": "#ffffff",
+    "celeste": "#00bcd4",
+    "green": "#4caf50"
+  },
+  "reviews": [
+    {
+      "name": "Hu Tianhao",
+      "text": "La Xiaomi Su7 è incredibile! L'autonomia è fantastica e il design è davvero elegante e supremo!",
+      "stars": 4.5
     },
-    "image_section": {
-      "id": "su7-base",
-      "title": "Xiaomi Su7 - Modello Base",
-      "images": [
-        {"src": "Immagini/white.jpg", "alt": "Xiaomi Su7 Base"},
-        {"src": "Immagini/white1.jpg", "alt": "Xiaomi Su7 Base"}
-      ]
+    {
+      "name": "Matteo Fuso",
+      "text": "Un'auto davvero comoda, molto facile da guidare. La mia esperienza è stata ottima!",
+      "stars": 5
     },
-    "description_section": {
-      "id": "su7-base",
-      "title": "Xiaomi Su7 Base",
-      "text": "Xiaomi Su7 Base è un'auto elettrica con prestazioni moderne, design innovativo e tecnologie avanzate.",
-      "features": [
-        {"icon": "fas fa-bolt", "text": "Autonomia fino a 668 km"},
-        {"icon": "fas fa-motorcycle", "text": "Motore da 299 CV"},
-        {"icon": "fas fa-cogs", "text": "Design sportivo ed elegante"}
-      ],
-      "color_selection_title": "Scegli il colore del tuo modello:",
-      "colors": [
-        {"color": "white", "hex": "#ffffff"},
-        {"color": "celeste", "hex": "#00bcd4"},
-        {"color": "green", "hex": "#4caf50"}
-      ],
-      "price": "A partire da €28.000",
-      "add_to_cart_text": "Aggiungi al Carrello"
-    },
-    "cart": {
-      "items": []
-    },
-    "reviews_section": {
-      "title": "Recensioni dei Clienti",
-      "reviews": [
-        {
-          "name": "Hu Tianhao",
-          "text": "\"La Xiaomi Su7 è incredibile! L'autonomia è fantastica e il design è davvero elegante e suprema!\"",
-          "rating": 4.5
-        },
-        {
-          "name": "Matteo Fuso",
-          "text": "\"Un'auto davvero comoda, molto facile da guidare. La mia esperienza è stata ottima!\"",
-          "rating": 5
-        },
-        {
-          "name": "Francesca Rossi",
-          "text": "\"Design futuristico e prestazioni eccellenti! La guida è molto fluida e piacevole.\"",
-          "rating": 4.5
-        }
-      ]
+    {
+      "name": "Francesca Rossi",
+      "text": "Design futuristico e prestazioni eccellenti! La guida è molto fluida e piacevole.",
+      "stars": 4.5
     }
-  }
-  
+  ]
+}

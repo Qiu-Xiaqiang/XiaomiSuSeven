@@ -111,103 +111,158 @@ function updateCartCount() {
     cartCount.innerText = cart.length;  // Aggiorna il numero degli articoli nel carrello
 }
 
-// Funzione per caricare il JSON e aggiornare il contenuto
-fetch('Su7base.json')
-  .then(response => response.json())
-  .then(data => {
-    // Gestione titolo pagina
-    document.getElementById('page-title').innerText = data.page_title;
+window.productPrice = 0;
 
-    // Gestione Navbar
-    const navbar = data.navbar;
-    document.getElementById('navbar-logo').src = navbar.logo;
-    document.getElementById('navbar-brand').innerText = navbar.brand_name;
-
-    const navbarItems = document.getElementById('navbar-items');
-    navbar.items.forEach(item => {
-      const li = document.createElement('li');
-      li.classList.add('nav-item');
-      const a = document.createElement('a');
-      a.classList.add('nav-link');
-      a.href = item.link;
-      a.innerText = item.text;
-      li.appendChild(a);
-      navbarItems.appendChild(li);
-    });
-
-    // Gestione Sezione Immagini
-    const imageSection = data.image_section;
-    document.getElementById('image-section-title').innerText = imageSection.title;
-    const carouselInner = document.getElementById('carousel-inner');
-    imageSection.images.forEach((image, index) => {
-      const div = document.createElement('div');
-      div.classList.add('carousel-item');
-      if (index === 0) div.classList.add('active');
-      const img = document.createElement('img');
-      img.src = image.src;
-      img.alt = image.alt;
-      img.classList.add('d-block', 'w-100', 'car-image');
-      div.appendChild(img);
-      carouselInner.appendChild(div);
-    });
-
-    // Gestione Sezione Descrizione
-    const descriptionSection = data.description_section;
-    document.getElementById('description-title').innerText = descriptionSection.title;
-    document.getElementById('description-text').innerText = descriptionSection.text;
-
-    const featuresList = document.getElementById('car-features');
-    descriptionSection.features.forEach(feature => {
-      const li = document.createElement('li');
-      li.innerHTML = `<i class="${feature.icon}"></i> ${feature.text}`;
-      featuresList.appendChild(li);
-    });
-
-    document.getElementById('color-selection-title').innerText = descriptionSection.color_selection_title;
-    const colorSelection = document.getElementById('color-selection');
-    descriptionSection.colors.forEach(color => {
-      const div = document.createElement('div');
-      div.classList.add('color-box');
-      div.style.backgroundColor = color.hex;
-      div.onclick = () => changeCarColor(color.color);
-      colorSelection.appendChild(div);
-    });
-
-    document.getElementById('price').innerHTML = descriptionSection.price;
-    document.getElementById('add-to-cart').innerText = descriptionSection.add_to_cart_text;
-
-    // Gestione Recensioni
-    const reviewsSection = data.reviews_section;
-    const reviewsContainer = document.getElementById('reviews-section');
-    reviewsSection.reviews.forEach(review => {
-      const div = document.createElement('div');
-      div.classList.add('card', 'text-white', 'bg-dark', 'mb-4');
-      const body = document.createElement('div');
-      body.classList.add('card-body');
-      const title = document.createElement('h5');
-      title.classList.add('card-title');
-      title.innerText = review.name;
-      const text = document.createElement('p');
-      text.classList.add('card-text');
-      text.innerText = review.text;
-      const stars = document.createElement('div');
-      for (let i = 0; i < 5; i++) {
-        const star = document.createElement('i');
-        star.classList.add('fas', i < Math.floor(review.rating) ? 'fa-star' : 'fa-star-half-alt');
-        stars.appendChild(star);
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("Su7Base.json")
+    .then(response => response.json())
+    .then(data => {
+      // Imposta titolo della pagina
+      document.getElementById("page-title").innerText = data.title;
+      document.title = data.title;
+      
+      // --- Navbar ---      
+      const navbarItemsContainer = document.getElementById("navbar-items");
+      navbarItemsContainer.innerHTML = "";
+      data.navbar.items.forEach(item => {
+        const li = document.createElement("li");
+        li.classList.add("nav-item", "d-flex", "align-items-center");
+        li.innerHTML = `<img src="${item.img}" style="height:40px; margin-right:10px;"><a class="nav-link" href="${item.link}">${item.text}</a>`;
+        navbarItemsContainer.appendChild(li);
+      });
+      document.getElementById("navbar-logo").src = data.navbar.logo;
+      document.getElementById("navbar-brand").innerText = data.navbar.brand;
+      
+      // --- Carosello ---      
+      document.getElementById("carousel-title").innerText = data.title;
+      let carouselInnerHTML = "";
+      data.carousel.forEach((imgObj, index) => {
+        carouselInnerHTML += `<div class="carousel-item ${index === 0 ? "active" : ""}">\n` +
+                             `  <img src="${imgObj.src}" alt="${imgObj.alt}" class="d-block w-100 car-image">\n` +
+                             `</div>`;
+      });
+      document.getElementById("carousel-inner").innerHTML = carouselInnerHTML;
+      document.getElementById("prev-text").innerText = "Precedente";
+      document.getElementById("next-text").innerText = "Successivo";
+      
+      // --- Descrizione ---      
+      document.getElementById("description-title").innerText = data.description.title;
+      document.getElementById("description-text").innerText = data.description.text;
+      
+      let featuresHTML = "";
+      data.description.features.forEach(feature => {
+        featuresHTML += `<li><i class="fas fa-check"></i> ${feature}</li>`;
+      });
+      document.getElementById("features-list").innerHTML = featuresHTML;
+      
+      document.getElementById("color-selection-title").innerText = "Scegli il colore del tuo modello:";
+      let colorOptionsHTML = "";
+      for (const [color, hex] of Object.entries(data.colors)) {
+        colorOptionsHTML += `<div class="color-box" style="background-color: ${hex};" onclick="changeCarColor('${color}')"></div>`;
       }
-      body.appendChild(title);
-      body.appendChild(text);
-      body.appendChild(stars);
-      div.appendChild(body);
-      reviewsContainer.appendChild(div);
-    });
+      document.getElementById("color-options").innerHTML = colorOptionsHTML;
+      
+      document.getElementById("price").innerText = data.description.price;
+      document.getElementById("add-to-cart").innerText = data.description.addToCart;
+      // Imposta il prezzo numerico globale
+      window.productPrice = data.description.priceValue;
+      
+      // --- Recensioni ---      
+      let reviewsHTML = `<h3 class="text-white mb-4">Recensioni dei Clienti</h3><div class="row">`;
+      data.reviews.forEach(review => {
+        let starsHTML = "";
+        const fullStars = Math.floor(review.stars);
+        const halfStar = review.stars % 1 !== 0;
+        for (let i = 0; i < fullStars; i++) starsHTML += "<i class='fas fa-star'></i>";
+        if (halfStar) starsHTML += "<i class='fas fa-star-half-alt'></i>";
+        const emptyStars = 5 - (halfStar ? fullStars + 1 : fullStars);
+        for (let i = 0; i < emptyStars; i++) starsHTML += "<i class='far fa-star'></i>";
+        
+        reviewsHTML += `<div class="col-md-4">\n` +
+                       `  <div class="card text-white bg-dark mb-4">\n` +
+                       `    <div class="card-body">\n` +
+                       `      <h5 class="card-title">${review.name}</h5>\n` +
+                       `      <p class="card-text">"${review.text}"</p>\n` +
+                       `      ${starsHTML}\n` +
+                       `    </div>\n` +
+                       `  </div>\n` +
+                       `</div>`;
+      });
+      reviewsHTML += "</div>";
+      document.getElementById("reviews-section").innerHTML = reviewsHTML;
+      
+      // --- Event Listener per Aggiungi al Carrello ---      
+      document.getElementById("add-to-cart").addEventListener("click", addToCart);
+      
+      // Aggiorna il conteggio del carrello
+      updateCartCount();
+    })
+    .catch(error => console.error("Errore nel caricamento del JSON:", error));
+});
 
-    // Aggiungi il listener per il bottone "Aggiungi al carrello"
-    document.getElementById('add-to-cart').addEventListener('click', addToCart);
+// Funzione per cambiare il colore (e aggiornare le immagini del carosello)
+function changeCarColor(color) {
+  selectedColor = color;
+  const carImages = document.querySelectorAll(".car-image");
+  carImages.forEach((img, index) => {
+    switch(color) {
+      case "white":
+        img.src = `Immagini/white${index + 1}.jpg`;
+        break;
+      case "celeste":
+        img.src = `Immagini/celeste${index + 1}.jpg`;
+        break;
+      case "green":
+        img.src = `Immagini/green${index + 1}.jpg`;
+        break;
+      default:
+        img.src = `Immagini/white${index + 1}.jpg`;
+    }
+  });
+  
+  // Evidenzia la casella colore selezionata
+  const colorBoxes = document.querySelectorAll(".color-box");
+  colorBoxes.forEach(box => { box.style.border = "none"; });
+  const selectedBox = Array.from(colorBoxes).find(box => box.style.backgroundColor.toLowerCase() === getColorHex(color).toLowerCase());
+  if (selectedBox) { selectedBox.style.border = "3px solid black"; }
+}
 
-    // Aggiorna il conteggio carrello alla prima visita
-    updateCartCount();
-  })
-  .catch(error => console.error('Errore nel caricamento del JSON:', error));
-// Funzione per mostrare il messaggio di conferma
+// Funzione per ottenere il codice esadecimale per un colore
+function getColorHex(color) {
+  switch(color) {
+    case "white": return "#ffffff";
+    case "celeste": return "#00bcd4";
+    case "green": return "#4caf50";
+    default: return "#ffffff";
+  }
+}
+
+// Funzione per aggiungere il prodotto al carrello
+function addToCart() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const car = {
+    name: document.getElementById("description-title").innerText,
+    price: window.productPrice,
+    color: selectedColor,
+    image: document.querySelector("#carousel-inner .carousel-item.active img").src
+  };
+  cart.push(car);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  showSuccessMessage();
+  updateCartCount();
+}
+
+// Mostra un messaggio di conferma
+function showSuccessMessage() {
+  const msgDiv = document.createElement("div");
+  msgDiv.classList.add("success-message");
+  msgDiv.innerText = "Macchina aggiunta al carrello con successo!";
+  document.body.appendChild(msgDiv);
+  setTimeout(() => { msgDiv.remove(); }, 3000);
+}
+
+// Aggiorna il conteggio degli articoli nel carrello (nella navbar)
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  document.getElementById("cart-count").innerText = cart.length;
+}

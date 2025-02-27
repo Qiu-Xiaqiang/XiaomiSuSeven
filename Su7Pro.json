@@ -1,59 +1,58 @@
 {
-    "page_title": "Xiaomi Su7 Pro - Modello",
-    "navbar": {
-      "logo": "Immagini/logo.jpg",
-      "brand_name": "Xiaomi Su7 Pro",
-      "items": [
-        {"text": "Home", "link": "index.html"},
-        {"text": "Carrello", "link": "carrello.html"},
-        {"text": "Contattaci", "link": "contatti.html"},
-        {"text": "Login", "link": "login.html"}
-      ]
-    },
-    "image_section": {
-      "id": "carCarousel",
-      "images": [
-        {"src": "Immagini/black.jpg", "alt": "Xiaomi Su7 Pro"},
-        {"src": "Immagini/black1.jpg", "alt": "Xiaomi Su7 Pro"},
-        {"src": "Immagini/black2.jpg", "alt": "Xiaomi Su7 Pro"},
-        {"src": "Immagini/black3.jpg", "alt": "Xiaomi Su7 Pro"},
-        {"src": "Immagini/black4.jpg", "alt": "Xiaomi Su7 Pro"}
-      ]
-    },
-    "description_section": {
-      "title": "Xiaomi Su7 Pro",
-      "text": "Xiaomi Su7 Pro è un'auto elettrica con prestazioni superiori, design futuristico e tecnologie avanzate. Disponibile in due colori: Nero, Arancione.",
-      "features": [
-        {"icon": "fas fa-bolt", "text": "Autonomia fino a 730 km"},
-        {"icon": "fas fa-motorcycle", "text": "Motore da 450 CV"},
-        {"icon": "fas fa-cogs", "text": "Design sportivo ed elegante"}
+  "pageTitle": "Xiaomi Su7 Pro - Modello",
+  "navbar": {
+    "brand": "Xiaomi Su7 Pro",
+    "logo": "Immagini/logo.jpg",
+    "links": [
+      { "href": "index.html", "text": "Home", "img": "Immagini/Home.jpg" },
+      { "href": "carrello.html", "text": "Carrello: 0", "img": "Immagini/carrello.jpg" },
+      { "href": "contatti.html", "text": "Contattaci", "img": "Immagini/contact.jpg" },
+      { "href": "login.html", "text": "Login", "img": "Immagini/Omino.jpg" }
+    ]
+  },
+  "model": {
+    "title": "Xiaomi Su7 Pro",
+    "description": "Xiaomi Su7 Pro è un'auto elettrica con prestazioni superiori, design futuristico e tecnologie avanzate. Disponibile in due colori: Nero, Arancione.",
+    "specs": [
+      { "icon": "fas fa-bolt", "text": "Autonomia fino a 730 km" },
+      { "icon": "fas fa-motorcycle", "text": "Motore da 450 CV" },
+      { "icon": "fas fa-cogs", "text": "Design sportivo ed elegante" }
+    ],
+    "price": "Prezzo: A partire da €32.000",
+    "priceValue": 32000,
+    "button": "Aggiungi al Carrello",
+    "colorSelectionText": "Scegli il colore del tuo modello:",
+    "carouselImages": {
+      "black": [
+        "Immagini/black.jpg",
+        "Immagini/black1.jpg",
+        "Immagini/black2.jpg",
+        "Immagini/black3.jpg",
+        "Immagini/black4.jpg"
       ],
-      "colors": [
-        {"color": "black", "hex": "#000000"},
-        {"color": "orange", "hex": "#FF5722"}
-      ],
-      "price": "A partire da €32.000",
-      "add_to_cart_text": "Aggiungi al Carrello"
-    },
-    "reviews_section": {
-      "title": "Recensioni dei Clienti",
-      "reviews": [
-        {
-          "name": "Grappeggia Nicolò",
-          "text": "Macchina incredibile! La velocità e l'autonomia sono eccezionali.",
-          "rating": 4.5
-        },
-        {
-          "name": "Cherubin Niccolò",
-          "text": "Comodità, prestazioni e design super! Non vedo l'ora di provarla sulla strada.",
-          "rating": 5
-        },
-        {
-          "name": "Ding Alessandro",
-          "text": "Ottima macchina! Il design è stupendo e il comfort è ai massimi livelli.",
-          "rating": 4.5
-        }
+      "orange": [
+        "Immagini/arancione1.jpg",
+        "Immagini/arancione2.jpg",
+        "Immagini/arancione3.jpg",
+        "Immagini/arancione4.jpg",
+        "Immagini/arancione5.jpg"
       ]
     }
+  },
+  "carouselControls": {
+    "prev": "Precedente",
+    "next": "Successivo"
+  },
+  "reviews": {
+    "title": "Recensioni dei Clienti",
+    "items": [
+      { "name": "Grappeggia Nicolò", "text": "Macchina incredibile! La velocità e l'autonomia sono eccezionali.", "rating": 4.5 },
+      { "name": "Cherubin Niccolò", "text": "Comodità, prestazioni e design super! Non vedo l'ora di provarla sulla strada.", "rating": 5 },
+      { "name": "Ding Alessandro", "text": "Ottima macchina! Il design è stupendo e il comfort è ai massimi livelli.", "rating": 4.5 }
+    ]
+  },
+  "colorBoxes": {
+    "black": "#000000",
+    "orange": "#FF5722"
   }
-  
+}
