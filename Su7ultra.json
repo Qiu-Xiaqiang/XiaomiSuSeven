@@ -1,0 +1,27 @@
+{
+    "title": "Xiaomi Su7 - Modello Ultra",
+    "navbarTitle": "Xiaomi Su7 Ultra",
+    "navbarHome": "Home",
+    "navbarCart": "Carrello",
+    "navbarContacts": "Contattaci",
+    "navbarLogin": "Login",
+    "cartCount": "Carrello: 0",
+    "carTitle": "Xiaomi Su7 Ultra",
+    "description": "Xiaomi Su7 Ultra è un'auto elettrica di alta gamma, con prestazioni incredibili e un design futuristico. Disponibile in un unico colore.",
+    "specs": {
+      "autonomy": "Autonomia fino a 560 km",
+      "power": "Motore da 1548 CV",
+      "design": "Design ultra-sportivo"
+    },
+    "price": "Prezzo: A partire da €105.000",
+    "addToCart": "Aggiungi al Carrello",
+    "review": {
+      "name": "Lei Jun -CEO of Xiaomi-",
+      "comment": "Comodissima e potente! La mia esperienza di guida è stata superlativa!"
+    },
+    "carouselControls": {
+      "prev": "Precedente",
+      "next": "Successivo"
+    }
+  }
+  

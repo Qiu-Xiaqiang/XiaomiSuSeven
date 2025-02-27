@@ -1,58 +1,60 @@
 {
-    "navbar": {
+  "title": "Xiaomi Su7 - E-commerce",
+  "navbar": {
+    "brand": "Xiaomi Su7",
+    "links": {
       "home": "Home",
-      "cart": "Carrello",
-      "contact": "Contattaci",
-      "login": "Login",
-      "logo": "Immagini/logo.jpg",
-      "icons": {
-        "home": "Immagini/Home.jpg",
-        "cart": "Immagini/carrello.jpg",
-        "contact": "Immagini/contact.jpg",
-        "user": "Immagini/Omino.jpg"
-      }
+      "carrello": "Carrello",
+      "contattaci": "Contattaci",
+      "login": "Login"
+    }
+  },
+  "hero": {
+    "heading": "Benvenuto su Xiaomi Su7",
+    "lead": "Scopri la nostra Su7 elettrica con prestazioni superiori, design innovativo e tecnologie avanzate.",
+    "btn": "Esplora i modelli"
+  },
+  "modelsSection": {
+    "heading": "Esplora i Nostri Modelli",
+    "subheading": "Potenza, autonomia e connettività, tutto ciò che cerchi in un'auto elettrica di alta qualità."
+  },
+  "cards": {
+    "base": {
+      "title": "Xiaomi Su7 - Modello Base",
+      "price": "A partire da €28.000",
+      "description": "Autonomia fino a 400 km, motore da 400 CV, design sportivo e tecnologie all'avanguardia.",
+      "btn": "Scopri di più"
     },
-    "hero": {
-      "title": "Benvenuto su Xiaomi Su7",
-      "subtitle": "Scopri la nostra Su7 elettrica con prestazioni superiori, design innovativo e tecnologie avanzate.",
-      "image": "Immagini/xiaomiSu7.jpg",
-      "buttonText": "Esplora i modelli",
-      "buttonLink": "archivioProdotti.html"
+    "pro": {
+      "title": "Xiaomi Su7 - Modello Pro",
+      "price": "A partire da €32.000",
+      "description": "Autonomia fino a 500 km, motore potenziato da 500 CV, interni premium e tecnologie di assistenza alla guida.",
+      "btn": "Scopri di più"
     },
-    "models": [
-      {
-        "name": "Xiaomi Su7 - Modello Base",
-        "price": "A partire da €28.000",
-        "image": "Immagini/white.jpg",
-        "description": "Autonomia fino a 668 km, motore da 299 CV, l'accelerazione da 0 a 100 richiede solo 5.28s, design sportivo e tecnologie all'avanguardia.",
-        "link": "Su7base.html"
-      },
-      {
-        "name": "Xiaomi Su7 - Modello Pro",
-        "price": "A partire da €32.000",
-        "image": "Immagini/black.jpg",
-        "description": "Autonomia fino a 730 km, motore potenziato da 450 CV, l'accelerazione da 0 a 100 richiede solo 4.37s, interni premium e tecnologie di assistenza alla guida.",
-        "link": "Su7Pro.html"
-      },
-      {
-        "name": "Xiaomi Su7 - Modello Max",
-        "price": "A partire da €40.000",
-        "image": "Immagini/pink.jpg",
-        "description": "Autonomia 880 km, motore da 673 CV, l'accelerazione da 0 a 100 richiede solo 2,78s, equipaggiamento completo e assistenza alla guida di livello 5.",
-        "link": "Su7Max.html"
-      },
-      {
-        "name": "Xiaomi Su7 - Modello Ultra",
-        "price": "A partire da €105.000",
-        "image": "Immagini/ultra3.jpg",
-        "description": "Autonomia 560 km, motore da 1548 CV, l'accelerazione da 0 a 100 richiede solo 1.98s. Le prestazioni sono alla pari con Porsche, la tecnologia è vicina a Tesla e il lusso è paragonabile a BBA.",
-        "link": "Su7ultra.html"
-      }
-    ],
-    "footer": {
-      "copyright": "©Xiaqiang Qiu - Tutti i diritti riservati",
-      "sale": "Vendite ufficiali di Xiaomi Su7",
-      "lastUpdate": "Ultimo aggiornamento: febbraio 2025"
+    "max": {
+      "title": "Xiaomi Su7 - Modello Max",
+      "price": "A partire da €40.000",
+      "description": "Autonomia 600 km, motore da 600 CV, equipaggiamento completo e assistenza alla guida di livello 5.",
+      "btn": "Scopri di più"
+    },
+    "ultra": {
+      "title": "Xiaomi Su7 - Modello Ultra",
+      "price": "A partire da €105.000",
+      "description": "Autonomia 600 km, motore da 600 CV, equipaggiamento completo e assistenza alla guida di livello 5.",
+      "btn": "Scopri di più"
+    }
+  },
+  "footer": {
+    "credits": {
+      "pre": "A cura di ",
+      "bold": "©Xiaqiang Qiu - Tutti i diritti riservati",
+      "post": " - Vendite ufficiali di Xiaomi Su7"
+    },
+    "links": {
+      "home": "Home",
+      "carrello": "Carrello",
+      "contattaci": "Contattaci",
+      "login": "Login"
     }
   }
-  
+}

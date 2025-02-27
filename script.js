@@ -1,49 +1,90 @@
+// index.js
+
 document.addEventListener("DOMContentLoaded", function() {
+    // Carica il file JSON con tutti i riferimenti testuali
     fetch('index.json')
-        .then(response => response.json())
-        .then(data => {
-            // Navbar
-            document.getElementById('logo').src = data.navbar.logo;
-            document.getElementById('navbar-home').textContent = data.navbar.home;
-            document.getElementById('home-link').textContent = data.navbar.home;
-            document.getElementById('cart-link').textContent = data.navbar.cart;
-            document.getElementById('contact-link').textContent = data.navbar.contact;
-            document.getElementById('login-link').textContent = data.navbar.login;
-
-            // Hero Section
-            document.getElementById('hero-title').textContent = data.hero.title;
-            document.getElementById('hero-subtitle').textContent = data.hero.subtitle;
-            document.getElementById('hero-image').src = data.hero.image;
-            document.getElementById('hero-button').textContent = data.hero.buttonText;
-            document.getElementById('hero-button').href = data.hero.buttonLink;
-
-            // Models Section (disposizione 2x2)
-            const modelsSection = document.getElementById('models-section');
-            data.models.forEach((model, index) => {
-                const modelCard = `
-                    <div class="col">
-                        <div class="card h-100">
-                            <div class="card-body text-center">
-                                <h5 class="card-title">${model.name}</h5>
-                                <p class="price">${model.price}</p>
-                                <img src="${model.image}" alt="${model.name}" class="card-img-top">
-                                <p class="card-text">${model.description}</p>
-                                <a href="${model.link}" class="btn btn-primary">Scopri di più</a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                modelsSection.innerHTML += modelCard;
-            });
-
-            // Footer
-            document.getElementById('footer-copyright').textContent = data.footer.copyright;
-            document.getElementById('footer-sale').textContent = data.footer.sale;
-            document.getElementById('footer-last-update').textContent = data.footer.lastUpdate;
-            document.getElementById('footer-home').textContent = data.navbar.home;
-            document.getElementById('footer-cart').textContent = data.navbar.cart;
-            document.getElementById('footer-contact').textContent = data.navbar.contact;
-            document.getElementById('footer-login').textContent = data.navbar.login;
-        })
-        .catch(error => console.error('Errore nel caricamento del JSON:', error));
-});
+      .then(response => response.json())
+      .then(data => {
+        // Aggiorna il titolo della pagina
+        document.title = data.title;
+  
+        // Navbar: aggiorna il brand e i link
+        const navbarBrand = document.querySelector('.navbar-brand');
+        if (navbarBrand) navbarBrand.textContent = data.navbar.brand;
+  
+        const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        if (navbarLinks.length >= 4) {
+          navbarLinks[0].textContent = data.navbar.links.home;
+          navbarLinks[1].textContent = data.navbar.links.carrello;
+          navbarLinks[2].textContent = data.navbar.links.contattaci;
+          navbarLinks[3].textContent = data.navbar.links.login;
+        }
+  
+        // Hero Section: aggiorna heading, lead e bottone
+        const heroHeading = document.querySelector('.hero h1');
+        if (heroHeading) heroHeading.textContent = data.hero.heading;
+  
+        const heroLead = document.querySelector('.hero .lead');
+        if (heroLead) heroLead.textContent = data.hero.lead;
+  
+        const heroBtn = document.querySelector('.hero a.esplora-btn');
+        if (heroBtn) heroBtn.textContent = data.hero.btn;
+  
+        // Sezione principale: heading e sottotitolo
+        const modelsHeading = document.querySelector('main section h2');
+        if (modelsHeading) modelsHeading.textContent = data.modelsSection.heading;
+  
+        const modelsSubheading = document.querySelector('main section p.text-muted');
+        if (modelsSubheading) modelsSubheading.textContent = data.modelsSection.subheading;
+  
+        // Cards: aggiorna titoli, prezzi, descrizioni e bottoni
+        const cardTitles = document.querySelectorAll('.card .card-title');
+        const cardPrices = document.querySelectorAll('.card .price');
+        const cardTexts = document.querySelectorAll('.card .card-text');
+        const cardBtns = document.querySelectorAll('.card a.btn-primary');
+  
+        if (cardTitles.length === 4) {
+          cardTitles[0].textContent = data.cards.base.title;
+          cardTitles[1].textContent = data.cards.pro.title;
+          cardTitles[2].textContent = data.cards.max.title;
+          cardTitles[3].textContent = data.cards.ultra.title;
+        }
+        if (cardPrices.length === 4) {
+          cardPrices[0].textContent = data.cards.base.price;
+          cardPrices[1].textContent = data.cards.pro.price;
+          cardPrices[2].textContent = data.cards.max.price;
+          cardPrices[3].textContent = data.cards.ultra.price;
+        }
+        if (cardTexts.length === 4) {
+          cardTexts[0].textContent = data.cards.base.description;
+          cardTexts[1].textContent = data.cards.pro.description;
+          cardTexts[2].textContent = data.cards.max.description;
+          cardTexts[3].textContent = data.cards.ultra.description;
+        }
+        if (cardBtns.length === 4) {
+          cardBtns[0].textContent = data.cards.base.btn;
+          cardBtns[1].textContent = data.cards.pro.btn;
+          cardBtns[2].textContent = data.cards.max.btn;
+          cardBtns[3].textContent = data.cards.ultra.btn;
+        }
+  
+        // Footer: aggiorna il testo dei crediti mantenendo il <span> per il grassetto
+        const footerCreditParagraph = document.querySelector('footer .container p');
+        if (footerCreditParagraph && data.footer.credits) {
+          footerCreditParagraph.innerHTML = data.footer.credits.pre +
+            '<span class="fw-bold">' + data.footer.credits.bold + '</span>' +
+            data.footer.credits.post;
+        }
+  
+        // Footer: aggiorna i link
+        const footerLinks = document.querySelectorAll('footer .footer-link');
+        if (footerLinks.length >= 4) {
+          footerLinks[0].textContent = data.footer.links.home;
+          footerLinks[1].textContent = data.footer.links.carrello;
+          footerLinks[2].textContent = data.footer.links.contattaci;
+          footerLinks[3].textContent = data.footer.links.login;
+        }
+      })
+      .catch(error => console.error('Errore nel caricamento del file JSON:', error));
+  });
+  

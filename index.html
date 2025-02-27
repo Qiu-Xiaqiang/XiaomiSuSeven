@@ -1,77 +1,130 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiaomi Su7 - E-commerce</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <img id="logo" alt="Logo Xiaomi Su7" style="height: 40px; margin-right: 10px;">
-            <a class="navbar-brand" href="index.html" id="navbar-home"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html" id="home-link"></a></li>
-                    <li class="nav-item"><a class="nav-link" href="carrello.html" id="cart-link"></a></li>
-                    <li class="nav-item"><a class="nav-link" href="contatti.html" id="contact-link"></a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.html" id="login-link"></a></li>
-                </ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <img src="Immagini/logo.jpg" alt="" style="height: 40px; margin-right: 10px;">
+      <a class="navbar-brand" href="index.html"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html"></a></li>
+          <img src="Immagini/Home.jpg" alt="" style="height: 40px; margin-right: 10px;">
+          <li class="nav-item"><a class="nav-link" href="carrello.html"></a></li>
+          <img src="Immagini/carrello.jpg" alt="" style="height: 40px; margin-right: 10px;">
+          <li class="nav-item"><a class="nav-link" href="contatti.html"></a></li>
+          <img src="Immagini/contact.jpg" alt="" style="height: 40px; margin-right: 10px;">
+          <li class="nav-item"><a class="nav-link" href="login.html"></a></li>
+          <img src="Immagini/Omino.jpg" alt="" style="height: 40px; margin-right: 10px;">
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero text-center">
+    <div class="container">
+      <h1></h1>
+      <p class="lead"></p>
+      <div class="containerSu7">
+        <img src="Immagini/xiaomiSu7.jpg" alt="">
+      </div>
+      <a href="archivioProdotti.html" class="btn btn-light btn-lg esplora-btn"></a>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    <section class="text-center mb-5">
+      <h2 class="fw-bold"></h2>
+      <p class="text-muted"></p>
+    </section>
+    
+    <!-- Card Section -->
+    <section>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title"></h5>
+              <!-- Prezzo -->
+              <p class="price"></p>
+              <img src="Immagini/white.jpg" alt="" class="card-img">
+              <p class="card-text"></p>
+              <a href="Su7base.html" class="btn btn-primary"></a>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero text-center">
-        <div class="container">
-            <h1 id="hero-title"></h1>
-            <p class="lead" id="hero-subtitle"></p>
-            <div class="containerSu7">
-                <img id="hero-image" alt="Xiaomi Su7">
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title"></h5>
+              <!-- Prezzo -->
+              <p class="price"></p>
+              <img src="Immagini/black.jpg" alt="" class="card-img">
+              <p class="card-text"></p>
+              <a href="Su7Pro.html" class="btn btn-primary"></a>
             </div>
-            <a id="hero-button" href="#" class="btn btn-light btn-lg esplora-btn"></a>
+          </div>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container my-5">
-        <section class="text-center mb-5">
-            <h2 class="fw-bold" id="explore-title"></h2>
-            <p class="text-muted" id="explore-subtitle"></p>
-        </section>
-        
-        <!-- Card Section (griglia) -->
-        <section id="models-section" class="row row-cols-1 row-cols-md-2 row-cols-lg-2">
-            <!-- Le card saranno inserite dinamicamente qui -->
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <div class="container">
-            <p id="footer-copyright"></p>
-            <p id="footer-sale"></p>
-            <p id="footer-last-update"></p>
-            <div>
-                <a href="index.html" class="text-light footer-link me-3" id="footer-home"></a>
-                <a href="carrello.html" class="text-light footer-link me-3" id="footer-cart"></a>
-                <a href="contatti.html" class="text-light footer-link" id="footer-contact"></a>
-                <a href="login.html" class="text-light footer-link me-3" id="footer-login"></a>
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title"></h5>
+              <!-- Prezzo -->
+              <p class="price"></p>
+              <img src="Immagini/pink.jpg" alt="" class="card-img">
+              <p class="card-text"></p>
+              <a href="Su7Max.html" class="btn btn-primary"></a>
             </div>
+          </div>
         </div>
-    </footer>
+        <div class="col-md-4">
+          <div class="card h-100 shadow">
+            <div class="card-body text-center">
+              <h5 class="card-title"></h5>
+              <!-- Prezzo -->
+              <p class="price"></p>
+              <img src="Immagini/ultra3.jpg" alt="" class="card-img">
+              <p class="card-text"></p>
+              <a href="Su7ultra.html" class="btn btn-primary"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Custom JS -->
-    <script src="script.js"></script>
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <div class="container">
+      <p></p>
+      <p id="last-update"></p>
+      <div>
+        <a href="index.html" class="text-light footer-link me-3"></a>
+        <a href="carrello.html" class="text-light footer-link me-3"></a>
+        <a href="contatti.html" class="text-light footer-link"></a>
+        <a href="login.html" class="text-light footer-link me-3"></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
